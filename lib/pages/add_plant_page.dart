@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:plant_watering_app/pages/all_plants_page.dart';
+import 'package:plant_watering_app/pages/home_page.dart';
 import 'package:plant_watering_app/utils/constants.dart';
 import 'package:plant_watering_app/utils/plant.dart';
 import 'package:plant_watering_app/utils/plant_database.dart';
@@ -57,7 +57,7 @@ class _AddPlantPageState extends State<AddPlantPage> {
                             size: 24,
                           ),
                           onPressed: () {
-                            Navigator.pop(context);
+                            Navigator.of(context).pop();
                           },
                         ),
                       ),
@@ -478,19 +478,27 @@ class _AddPlantPageState extends State<AddPlantPage> {
                                     .instance
                                     .createPlantReturnId(newPlant);
 
+                                //Add a water activity for X days ago
+                                WaterActivity waterActivity1 = WaterActivity(
+                                    wPlantId: createdPlantId,
+                                    wWaterActivityDate: lastWatered
+                                        .subtract(Duration(days: wateringGap)));
+                                PlantDatabase.instance
+                                    .createWaterActivity(waterActivity1);
+
                                 //Also add a watering activity for today in DB
-                                WaterActivity waterActivity = WaterActivity(
+                                WaterActivity waterActivity2 = WaterActivity(
                                     wPlantId: createdPlantId,
                                     wWaterActivityDate: lastWatered);
                                 PlantDatabase.instance
-                                    .createWaterActivity(waterActivity);
+                                    .createWaterActivity(waterActivity2);
                                 //And go back to home page
                                 if (context.mounted) {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              const AllPlantsPage()));
+                                              const HomePage()));
                                 }
                               },
                               icon: const Icon(
