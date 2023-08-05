@@ -1,16 +1,25 @@
-# plant_watering_app
+# Welcome to Garden Journal App
 
-A new Flutter project.
+A Flutter based mobile app for tracking watering of plants in your garden
 
-## Getting Started
+![Cover Image](/assets/images/GJ_BG.png)
 
-This project is a starting point for a Flutter application.
+## Technologies
 
-A few resources to get you started if this is your first Flutter project:
+Built with Flutter.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Uses SQFlite for local storage of data.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## About
+
+The app can be downloaded from:
+
+[Google Drive APK Link](https://drive.google.com/drive/u/0/folders/1yYDZ78-WmEkyI0ddRYSN7iv3jfDvMC-P)
+
+## Demo
+
+You can watch a quick [demo video here](https://www.youtube.com/watch?v=Iz1T-oVCJUw)
+
+## Portfolio
+
+You may also like to check out my [Portfolio](https://kakashiorion.github.io/portfolio-website/)
