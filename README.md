@@ -22,4 +22,4 @@ You can watch a quick [demo video here](https://www.youtube.com/watch?v=Iz1T-oVC
 
 ## Portfolio
 
-You may also like to check out my [Portfolio](https://kakashiorion.github.io/portfolio-website/)
+You may also like to check out my [Portfolio](https://nitingautam.net/)
